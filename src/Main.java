@@ -11,8 +11,8 @@ public class Main {
         shohokuList.add(new Slumdunk("宮城リョータ", 7));
         shohokuList.add(new Slumdunk("三井寿", 14));
 
-        for (int i = 0; i < shohokuList.size(); i++) {
-            System.out.println(shohokuList.get(i));
+        for (Slumdunk slumdunk : shohokuList) {
+            System.out.println(slumdunk);
         }
 
         Map<String, String> shohokuMap = new HashMap<>();
@@ -26,7 +26,7 @@ public class Main {
             System.out.println("\n選手名を入力してください。身長を調べます。");
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
-            
+
             if (shohokuMap.get(input) == null) {
                 throw new NullPointerException();
             } else {
